@@ -25,18 +25,16 @@ async function findByEmail(req, res) {
 
 // update user details
 async function updateUser(req, res) {
-    console.log(parseInt(req.body.weight));
+    console.log(req.body.email)
     try {
        const user = await User.findOneAndUpdate({
             email: req.body.email 
         }, {
             name: req.body.name,
-
             weight: parseFloat(req.body.weight),
             height: parseFloat(req.body.height),
             goalWeight: parseFloat(req.body.goalWeight),
             workoutGoal: parseFloat(req.body.workoutGoal),
-
             firstLoggin: "false" // added so we can redirect if first loggin
         }
         )
