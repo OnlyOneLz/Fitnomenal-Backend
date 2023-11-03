@@ -2,6 +2,7 @@ import express, {Router} from "express";
 import cors from 'cors'
 import bodyParser from "body-parser"
 import 'dotenv/config'
+import serverless from "serverless-http";
 import userRouter from "../../routes/userRoutes.js";
 import dailyWorkoutRouter from "../../routes/dailyWorkoutRoutes.js";
 import workoutHistoryRouter from "../../routes/workoutHistoryRoutes.js";
